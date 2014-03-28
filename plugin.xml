@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.discotech.sms"
+      version="0.1.0">
+    <name>Sms</name>
+    <description>Sample PhoneGap view Smsn</description>
+    <license>MIT</license>
+    <keywords>phonegap,sms</keywords>
+ 
+ 
+    <js-module src="www/sms.js" name="Sms">
+        <clobbers target="window.sms" />
+    </js-module>
+ 
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Sms">
+                <param name="android-package" value="com.discotech.sms.Sms"/>
+            </feature>
+        </config-file>
+ 
+        <source-file src="src/android/Sms.java" target-dir="src/com/discotech/sms" />      
+     </platform>          
+</plugin>
