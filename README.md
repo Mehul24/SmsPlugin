@@ -1,0 +1,4 @@
+SmsPlugin
+=========
+
+Phonegap plugin
