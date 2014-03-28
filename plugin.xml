@@ -15,11 +15,12 @@
  
     <!-- android -->
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Sms">
-                <param name="android-package" value="com.discotech.sms.Sms"/>
-            </feature>
-        </config-file>
+       <config-file target="AndroidManifest.xml" parent="/manifest/application">
+          <activity android:name="com.discotech.sms" android:label="@string/discotech">
+              <intent-filter>
+              </intent-filter>
+          </activity>
+      </config-file>
  
         <source-file src="src/android/Sms.java" target-dir="src/com/discotech/sms" />      
      </platform>          
