@@ -16,7 +16,7 @@
     <!-- android -->
     <platform name="android">
        <config-file target="AndroidManifest.xml" parent="/manifest/application">
-          <activity android:name="com.discotech.sms" android:label="@string/discotech">
+          <activity android:name="com.discotech.sms" android:label="@string/app_name">
               <intent-filter>
               </intent-filter>
           </activity>
