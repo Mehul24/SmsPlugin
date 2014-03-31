@@ -8,19 +8,29 @@
     <license>MIT</license>
     <keywords>phonegap,sms</keywords>
  
+   <asset src="www/sms.js" target="sms.js" />
+    
  
-    <js-module src="www/sms.js" name="Sms">
-        <clobbers target="window.sms" />
-    </js-module>
+ 
+    <!--<js-module src="www/sms.js" name="Sms">-->
+    <!--    <clobbers target="window.sms" />-->
+    <!--</js-module>-->
  
     <!-- android -->
     <platform name="android">
-       <config-file target="AndroidManifest.xml" parent="/manifest/application">
-          <activity android:name="com.discotech.sms" android:label="@string/app_name">
-              <intent-filter>
-              </intent-filter>
-          </activity>
-      </config-file>
+      <config-file target="config.xml" parent="/*">
+            <feature name="com.discotech.sms">
+                <param name="android-package" value="com.discotech.sms.Sms" />
+            </feature>
+        </config-file>
+
+    
+      <!-- <config-file target="AndroidManifest.xml" parent="/manifest/application">-->
+      <!--    <activity android:name="com.discotech.sms" android:label="@string/app_name">-->
+      <!--        <intent-filter>-->
+      <!--        </intent-filter>-->
+      <!--    </activity>-->
+      <!--</config-file>-->
  
         <source-file src="src/android/Sms.java" target-dir="src/com/discotech/sms" />      
      </platform>          
