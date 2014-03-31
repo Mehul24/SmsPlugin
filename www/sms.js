@@ -9,6 +9,6 @@ var sms = {
             }]
         ); 
      }
-}
+};
 
 module.exports = sms;
