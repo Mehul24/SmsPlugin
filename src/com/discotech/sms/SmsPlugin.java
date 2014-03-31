@@ -1,23 +1,22 @@
 package com.discotech.sms;
 
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
-import org.json.JSONObject;
+import org.apache.cordova.api.CallbackContext;
+import org.apache.cordova.api.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
-
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 
-public class Sms extends CordovaPlugin{
+public class SmsPlugin extends CordovaPlugin{
 	public static final  String ACTION_SEND_SMS = "openSmsView";
 	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+		Log.d("SMS Plugin", "Hello, this is a native function called from PhoneGap/Cordova!"); 
 		try {
 		    if (ACTION_SEND_SMS.equals(action)) { 
-		             JSONObject arg_object = args.getJSONObject(0);
-		             Intent calIntent = new Intent(Intent.ACTION_VIEW)
+		        Intent calIntent = new Intent(Intent.ACTION_VIEW)
 		        .setData(Uri.parse("sms:"))
 		        .putExtra("sms_body", "Testing"); 
 		             
