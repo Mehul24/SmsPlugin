@@ -11,14 +11,14 @@
    
     <keywords>phonegap,sms</keywords>
  
-    <js-module src="www/sms.js" name="SendSms">
+    <js-module src="www/sms.js" name="sms">
         <clobbers target="window.sms" />
     </js-module>
  
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="SendSms">
+            <feature name="sms">
                 <param name="android-package" value="com.discotech.sms.SmsPlugin"/>
             </feature>
         </config-file>
